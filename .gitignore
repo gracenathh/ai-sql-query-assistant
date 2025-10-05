@@ -1,0 +1,34 @@
+# Python cache and environment
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+.venv/
+
+# Environment variables / API keys
+.env
+
+# Database files
+*.db
+*.sqlite
+instance/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Flask / build artifacts
+*.log
+*.pid
+
+# Pytest / coverage
+.coverage
+htmlcov/
+
+# Temporary files
+tmp/
