@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>AI SQL Assistant</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Arial; margin: 2rem; }
+    label { display:block; margin-top: 1rem; }
+    .row { margin: 1rem 0; }
+    .btn { padding: 0.5rem 1rem; margin-right: 0.5rem; cursor:pointer; border:0; border-radius:6px; }
+    .primary { background:#111; color:white; }
+    .secondary { background:#eee; color:#111; }
+    .flash { color: #b00020; margin: 0.5rem 0; }
+  </style>
+</head>
+<body>
+  <h2>🧠 AI SQL Assistant</h2>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, msg in messages %}
+        <div class="flash">{{ msg }}</div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  <form method="POST" enctype="multipart/form-data">
+    <label>OpenAI API Key</label>
+    <input type="password" name="api_key" placeholder="sk-..." required style="width: 360px;">
+
+    <label>SQLite DB file (optional; falls back to local chinook.db)</label>
+    <input type="file" name="db_file" accept=".db,.sqlite,.sqlite3">
+    <small>Only .db, .sqlite, or .sqlite3 files are supported.</small>
+
+    <!-- NEW: schema-only toggle -->
+    <label style="margin-top: 10px;">
+    <input type="checkbox" name="schema_only" value="true">
+    Generate SQL only (don’t execute queries) — <span style="color:#666;">safe, schema-only mode</span>
+    </label>
+
+    <div class="row">
+      <button class="btn secondary" type="submit" name="action" value="schema">Understand table schema</button>
+      <button class="btn primary" type="submit" name="action" value="start">Start querying →</button>
+    </div>
+  </form>
+</body>
+</html>
