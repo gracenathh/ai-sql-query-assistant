@@ -57,7 +57,7 @@ SQL: SELECT BillingCountry, AVG(Total) FROM invoices GROUP BY BillingCountry;
 
 ## 🧑‍💻 Run Locally
 ```
-git clone https://github.com/<yourusername>/ai-sql-query-assistant.git
+git clone https://github.com/gracenathh/ai-sql-query-assistant.git
 cd ai-sql-query-assistant
 pip install -r requirements.txt
 flask run
