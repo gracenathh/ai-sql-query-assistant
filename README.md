@@ -39,7 +39,7 @@ SQL: SELECT BillingCountry, AVG(Total) FROM invoices GROUP BY BillingCountry;
 ```
 
 ## 🎥 Demo
-<video src="https://raw.githubusercontent.com/gracenathh/ai-sql-query-assistant/main/DEMO.MOV" width="600" controls></video>
+<video src="https://raw.githubusercontent.com/gracenathh/ai-sql-query-assistant/main/DEMO.mp4" width="600" controls></video>
 
 ## ⚠️ Current Limitations
 1. ❌ No conversation memory, thus each question is independent
