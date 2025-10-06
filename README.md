@@ -38,8 +38,16 @@ Q: What’s the average invoice total by country?
 SQL: SELECT BillingCountry, AVG(Total) FROM invoices GROUP BY BillingCountry;
 ```
 
-## 🎥 Demo
-<video src="https://raw.githubusercontent.com/gracenathh/ai-sql-query-assistant/main/DEMO.mp4" width="600" controls></video>
+## 🖼 Demo
+**Home Page**
+You will have to key in your own OpenAI API key & optional uploading the db
+![Home](assets/main_page.png)
+
+**Schema View**
+![Schema](assets/schema_view.png)
+
+**Query Result**
+![Result](assets/query_page.png)
 
 ## ⚠️ Current Limitations
 1. ❌ No conversation memory, thus each question is independent
