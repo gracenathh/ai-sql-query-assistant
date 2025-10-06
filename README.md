@@ -38,6 +38,9 @@ Q: What’s the average invoice total by country?
 SQL: SELECT BillingCountry, AVG(Total) FROM invoices GROUP BY BillingCountry;
 ```
 
+## 🎥 Demo
+<video src="DEMO.MOV" width="600" controls></video>
+
 ## ⚠️ Current Limitations
 1. ❌ No conversation memory, thus each question is independent
 2. ⚡ No caching which requires SQL to be regenerated every time
